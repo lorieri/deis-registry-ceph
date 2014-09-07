@@ -16,5 +16,6 @@ ADD https://raw.githubusercontent.com/lorieri/docker-registry/d923eda8836881e58f
 
 ADD https://raw.githubusercontent.com/lorieri/docker-registry/0441df74e47e613be51683567ec2700a5ee0edce/config/config_sample.yml /docker-registry/config/config_sample.yml
 
-expose 5000
-cmd exec docker-registry
+WORKDIR /app
+CMD ["/app/bin/boot"]
+EXPOSE 5000
